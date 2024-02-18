@@ -16,12 +16,19 @@ M.general = {
   },
 
   n = {
-    ["<Esc>"] = { "<cmd> noh <CR>", "Clear highlights" },
+    ["<leader>n"] = { "<cmd> noh <CR>", "Clear highlights" },
     -- switch between windows
     ["<C-h>"] = { "<C-w>h", "Window left" },
     ["<C-l>"] = { "<C-w>l", "Window right" },
     ["<C-j>"] = { "<C-w>j", "Window down" },
     ["<C-k>"] = { "<C-w>k", "Window up" },
+
+    -- jump
+    ["<leader>j"] = { "<S-J>", "Delete a line" },
+    ["<S-J>"] = { "10gj", "Jump down multiple lines" },
+    ["<S-K>"] = { "10gk", "Jump up multiple lines" },
+
+    ["<leader>v"] = { ":vsplit<CR>", "New vertical split" },
 
     -- save
     ["<C-s>"] = { "<cmd> w <CR>", "Save file" },
@@ -30,7 +37,7 @@ M.general = {
     ["<C-c>"] = { "<cmd> %y+ <CR>", "Copy whole file" },
 
     -- line numbers
-    ["<leader>n"] = { "<cmd> set nu! <CR>", "Toggle line number" },
+    ["<leader>L"] = { "<cmd> set nu! <CR>", "Toggle line number" },
     ["<leader>rn"] = { "<cmd> set rnu! <CR>", "Toggle relative number" },
 
     -- Allow moving the cursor through wrapped lines with j, k, <Up> and <Down>
@@ -144,7 +151,7 @@ M.lspconfig = {
       "LSP definition",
     },
 
-    ["K"] = {
+    ["<leader>k"] = {
       function()
         vim.lsp.buf.hover()
       end,
@@ -258,7 +265,7 @@ M.nvimtree = {
 
   n = {
     -- toggle
-    ["<C-n>"] = { "<cmd> NvimTreeToggle <CR>", "Toggle nvimtree" },
+    ["\\]"] = { "<cmd> NvimTreeToggle <CR>", "Toggle nvimtree" },
 
     -- focus
     ["<leader>e"] = { "<cmd> NvimTreeFocus <CR>", "Focus nvimtree" },
@@ -350,12 +357,12 @@ M.nvterm = {
       "New horizontal term",
     },
 
-    ["<leader>v"] = {
-      function()
-        require("nvterm.terminal").new "vertical"
-      end,
-      "New vertical term",
-    },
+    -- ["<leader>v"] = {
+    --  function()
+    --    require("nvterm.terminal").new "vertical"
+    --  end,
+    --  "New vertical term",
+    --},
   },
 }
 
