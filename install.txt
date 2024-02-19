@@ -15,3 +15,4 @@ Future Installs:
 * <leader>th to choose theme, e.g., 'kanagawa'
 * Install Hack font from nerdfonts.com to resolve the glyphs and update the term. Download the font and open it and hit install.
 * In iterm2, settings -> Profiles -> Text -> Font
+* ln -s ~/.config/nvim/.tmux.conf ~/.tmux.conf
