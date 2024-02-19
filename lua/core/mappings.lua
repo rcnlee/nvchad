@@ -18,17 +18,23 @@ M.general = {
   n = {
     ["<leader>n"] = { "<cmd> noh <CR>", "Clear highlights" },
     -- switch between windows
-    ["<C-h>"] = { "<C-w>h", "Window left" },
-    ["<C-l>"] = { "<C-w>l", "Window right" },
-    ["<C-j>"] = { "<C-w>j", "Window down" },
-    ["<C-k>"] = { "<C-w>k", "Window up" },
+    -- ["<C-h>"] = { "<C-w>h", "Window left" },
+    -- ["<C-l>"] = { "<C-w>l", "Window right" },
+    -- ["<C-j>"] = { "<C-w>j", "Window down" },
+    -- ["<C-k>"] = { "<C-w>k", "Window up" },
 
     -- jump
     ["<leader>j"] = { "<S-J>", "Delete a line" },
     ["<S-J>"] = { "10gj", "Jump down multiple lines" },
     ["<S-K>"] = { "10gk", "Jump up multiple lines" },
 
-    ["<leader>v"] = { ":vsplit<CR>", "New vertical split" },
+    ["<leader>v"] = { "<cmd> vsplit <CR>", "New vertical split" },
+
+    -- tmux navigator
+    ["<C-l>"] = { "<cmd> NvimTmuxNavigateRight <CR>", "Tmux right pane" },
+    ["<C-h>"] = { "<cmd> NvimTmuxNavigateLeft <CR>", "Tmux left pane" },
+    ["<C-j>"] = { "<cmd> NvimTmuxNavigateDown <CR>", "Tmux down pane" },
+    ["<C-k>"] = { "<cmd> NvimTmuxNavigateUp <CR>", "Tmux up pane" },
 
     -- save
     ["<C-s>"] = { "<cmd> w <CR>", "Save file" },

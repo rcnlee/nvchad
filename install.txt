@@ -1,0 +1,16 @@
+Initial installation Notes:
+* Installed neovim 0.9.4 from tar.gz because the one from ubuntu apt-get is too old.  Added a symlink to ~/usr/bin and added that to path.
+* Installed nvchad following installation instructions from nvchad site: "git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim"
+* create private repo and personal access token (settings -> developer settings)
+* git config --global credential.helper cache (to cache credentials, first time use PAT as the password)
+* git remote add rcnlee https://rcnlee@github.com/rcnlee/nvchad
+* git fetch --unshallow origin
+* git push rcnlee
+* added nvim-tmux-navigator custom plugin and override 
+
+Future Installs:
+* install latest neovim from source
+* git clone https://github.com/rcnlee/nvchad ~/.config/nvim"
+* add to bashrc alias vim="nvim"
+* <leader>th to choose theme, e.g., 'kanagawa'
+* Install Hack font from nerdfonts.com to resolve the glyphs and update the term.
