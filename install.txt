@@ -10,7 +10,8 @@ Initial installation Notes:
 
 Future Installs:
 * install latest neovim from source
-* git clone https://github.com/rcnlee/nvchad ~/.config/nvim"
+* git clone https://rcnlee@github.com/rcnlee/nvchad ~/.config/nvim
 * add to bashrc alias vim="nvim"
 * <leader>th to choose theme, e.g., 'kanagawa'
-* Install Hack font from nerdfonts.com to resolve the glyphs and update the term.
+* Install Hack font from nerdfonts.com to resolve the glyphs and update the term. Download the font and open it and hit install.
+* In iterm2, settings -> Profiles -> Text -> Font
