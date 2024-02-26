@@ -36,6 +36,10 @@ M.general = {
     ["<C-j>"] = { "<cmd> NvimTmuxNavigateDown <CR>", "Tmux down pane" },
     ["<C-k>"] = { "<cmd> NvimTmuxNavigateUp <CR>", "Tmux up pane" },
 
+
+    -- markdown
+    ["<leader>md"] = { "<cmd> Glow <CR>", "Open markdown" },
+
     -- save
     ["<C-s>"] = { "<cmd> w <CR>", "Save file" },
 
