@@ -36,6 +36,8 @@ local plugins = {
     config = true,
     cmd = "Glow",
 
-  }
+  },
+  { "nvim-lua/plenary.nvim",
+  },
 }
 return plugins

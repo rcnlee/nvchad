@@ -30,3 +30,20 @@ vim.api.nvim_create_user_command(
   end,
   { nargs = 0 }
 )
+
+vim.api.nvim_create_user_command(
+  'Clip',
+  function()
+    local Path = require('plenary.path')
+    local bufnr = vim.api.nvim_get_current_buf()
+    local start_pos, end_pos
+    start_pos = vim.fn.getpos("'<")
+    end_pos = vim.fn.getpos("'>")
+    local lines = vim.api.nvim_buf_get_lines(bufnr, start_pos[2] -1, end_pos[2], false)
+    local output_path = '/tmp/clipboard'
+    local path = Path:new(output_path)
+    path:write(table.concat(lines,"\n"), "w")
+    vim.notify("Highlighted text saved to " .. output_path)
+  end,
+  { range = true }
+)
