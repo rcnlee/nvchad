@@ -26,7 +26,7 @@ vim.api.nvim_create_user_command(
     local result = vim.fn.system('uuidgen')
     local lines = vim.split(result,'\n')
     table.remove(lines, 2)
-    vim.api.nvim_put(lines,'l',false,false)
+    vim.api.nvim_put(lines,'c',true,true)
   end,
   { nargs = 0 }
 )
