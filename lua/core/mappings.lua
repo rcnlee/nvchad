@@ -30,6 +30,8 @@ M.general = {
 
     ["<leader>v"] = { "<cmd> vsplit <CR>", "New vertical split" },
 
+    ["<leader>u"] = { "<cmd> Uuid <CR>", "Generate new uuid" },
+
     -- tmux navigator
     ["<C-l>"] = { "<cmd> NvimTmuxNavigateRight <CR>", "Tmux right pane" },
     ["<C-h>"] = { "<cmd> NvimTmuxNavigateLeft <CR>", "Tmux left pane" },

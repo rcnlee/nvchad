@@ -19,3 +19,14 @@ end
 dofile(vim.g.base46_cache .. "defaults")
 vim.opt.rtp:prepend(lazypath)
 require "plugins"
+
+vim.api.nvim_create_user_command(
+  'Uuid',
+  function()
+    local result = vim.fn.system('uuidgen')
+    local lines = vim.split(result,'\n')
+    table.remove(lines, 2)
+    vim.api.nvim_put(lines,'l',false,false)
+  end,
+  { nargs = 0 }
+)
