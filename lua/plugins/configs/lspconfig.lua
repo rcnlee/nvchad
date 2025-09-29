@@ -58,7 +58,8 @@ vim.lsp.config('lua_ls', {
         preloadFileSize = 10000,
       },
     },
-  })
+  },
+})
 vim.lsp.enable('lua_ls')
 
 return M
